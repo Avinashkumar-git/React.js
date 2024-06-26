@@ -1,6 +1,4 @@
-                                                 |
-
-
+                                          
 ## Core React
 
 1.  ### What is React?
@@ -3982,7 +3980,8 @@ class ParentComponent extends React.Component {
 
 199. ### What is suspense component?
 
-     If the module containing the dynamic import is not yet loaded by the time parent component renders, you must show some fallback content while you’re waiting for it to load using a loading indicator. This can be done using **Suspense** component.
+    Suspense ,suspends component rendering and render a fallback component , untill condition is met.
+    If the module containing the dynamic import is not yet loaded by the time parent component renders, you must show some fallback content while you’re waiting for it to load using a loading indicator. This can be done using **Suspense** component.
 
      For example, the below code uses suspense component,
 
