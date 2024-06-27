@@ -572,7 +572,7 @@ class ParentComponent extends React.Component {
 
 22. ### What are controlled components?
 
-    A component that controls the input elements within the forms on subsequent user input is called **Controlled Component**, i.e, every state mutation will have an associated handler function. That means, the displayed data is always in sync with the state of the component.
+   In Controlled component,  the form data is handeled by Rieact itself.
 
     The controlled components will be implemented using the below steps,
 
