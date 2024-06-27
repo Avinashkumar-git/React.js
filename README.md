@@ -493,8 +493,7 @@ class ParentComponent extends React.Component {
 15. ### What is "key" prop and what is the benefit of using it in arrays of elements?
 
     Keys help React identify which items have changed, are added , or removed. Keys should be given to the elements inside the array to give the elements a stable idenety.
-      A `key` is a special attribute you **should** include when mapping over arrays to render data. _Key_ prop helps React identify which items have changed, are added, or are removed.
-
+      
     Keys should be unique among its siblings. Most often we use ID from our data as _key_:
 
     ```jsx harmony
