@@ -572,7 +572,7 @@ class ParentComponent extends React.Component {
 
 22. ### What are controlled components?
 
-   In Controlled component,  the form data is handeled by Rieact itself.
+      In Controlled component,  the form data is handeled by React itself.
 
     The controlled components will be implemented using the below steps,
 
@@ -608,7 +608,7 @@ class ParentComponent extends React.Component {
 
 23. ### What are uncontrolled components?
 
-    The **Uncontrolled Components** are the ones that store their own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.
+      In Uncontrolled Component , form data is handled by dom  using the ref.
 
     The uncontrolled components will be implemented using the below steps,
 
