@@ -195,7 +195,7 @@
 
 8.  ### What are Pure Components?
 
-    A React component is considered aPure Component , if it renders the same output for the same state and props value.
+    A React component is considered a Pure Component , if it renders the same output for the same state and props value.
     React provides the "Pure Component " base class for these class component.class components that extend the "Reacxt.PureComponent" class are treated as pure components.
     It is the same as componet except that Pure Components take care of "ShouldComponentUpdate" by itself. it does the shallow comparison on the state and props data. if the previous state and props data is the same as the nextr props and satate, the compoenet is not Re-rendered.
     Note- The sate and props are shallow compared.  
