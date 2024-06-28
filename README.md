@@ -5580,7 +5580,7 @@ Technically it is possible to write nested function components but it is not sug
 
 7. ### What are forward refs?
 
-   _Ref forwarding_ is a feature that lets some components take a _ref_ they receive, and pass it further down to a child.
+   _Ref forwarding_ is a technique for passing a ref through a component to one of its children.
 
    ```jsx harmony
    const ButtonElement = React.forwardRef((props, ref) => (
