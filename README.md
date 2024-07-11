@@ -1143,27 +1143,12 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-46. ### What is the impact of indexes as keys?
+46. ### What is webpack?
 
-    Keys should be stable, predictable, and unique so that React can keep track of elements.
+    Webpack in React.js is the javascript module bundeler that is commanly used with React to bundle and manage dependencies.
 
-    In the below code snippet each element's key will be based on ordering, rather than tied to the data that is being represented. This limits the optimizations that React can do and creates confusing bugs in the application.
+    It takes all of the individulal Javascript files and other assets in a project, Such as images and CSS , and combine them into a single bundle that can be loaded by the browser.
 
-    ```jsx harmony
-    {
-      todos.map((todo, index) => <Todo {...todo} key={index} />);
-    }
-    ```
-
-    If you use element data for unique key, assuming `todo.id` is unique to this list and stable, React would be able to reorder elements without needing to reevaluate them as much.
-
-    ```jsx harmony
-    {
-      todos.map((todo) => <Todo {...todo} key={todo.id} />);
-    }
-    ```
-
-    **Note:** If you don't specify `key` prop at all, React will use index as a key's value while iterating over an array of data.
 
     **[⬆ Back to Top](#table-of-contents)**
 
