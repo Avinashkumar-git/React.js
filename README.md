@@ -1,5 +1,5 @@
                                           
-## Core React
+## Core React 
 
 1.  ### What is React?
 
@@ -1149,10 +1149,16 @@ class ParentComponent extends React.Component {
 
     It takes all of the individulal Javascript files and other assets in a project, Such as images and CSS , and combine them into a single bundle that can be loaded by the browser.
 
+46. ### What is bundling?
+
+    Most React app will have their files "bundled" using tools like webpack, Rollup or Browserify. 
+
+    Bundling is process of following imported files and merging them into a single file a "bundle" . this bundle can than be included into a webpage to load an entire app at once.
+
 
     **[⬆ Back to Top](#table-of-contents)**
 
-47. ### How do you conditionally render components?
+48. ### How do you conditionally render components?
 
     In some cases you want to render different components depending on some state. JSX does not render `false` or `undefined`, so you can use conditional _short-circuiting_ to render a given part of your component only if a certain condition is true.
 
@@ -1178,7 +1184,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-48. ### Why we need to be careful when spreading props on DOM elements?
+49. ### Why we need to be careful when spreading props on DOM elements?
 
     When we _spread props_ we run into the risk of adding unknown HTML attributes, which is a bad practice. Instead we can use prop destructuring with `...rest` operator, so it will add only required props.
 
@@ -1196,7 +1202,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-49. ### How do you memoize a component?
+50. ### How do you memoize a component?
 
     There are memoize libraries available which can be used on function components.
 
@@ -1228,7 +1234,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-50. ### How you implement Server Side Rendering or SSR?
+51. ### How you implement Server Side Rendering or SSR?
 
     React is already equipped to handle rendering on Node servers. A special version of the DOM renderer is available, which follows the same pattern as on the client side.
 
@@ -1243,19 +1249,19 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-51. ### How to enable production mode in React?
+52. ### How to enable production mode in React?
 
     You should use Webpack's `DefinePlugin` method to set `NODE_ENV` to `production`, by which it strip out things like propType validation and extra warnings. Apart from this, if you minify the code, for example, Uglify's dead-code elimination to strip out development only code and comments, it will drastically reduce the size of your bundle.
 
     **[⬆ Back to Top](#table-of-contents)**
 
-52. ### Do Hooks replace render props and higher order components?
+53. ### Do Hooks replace render props and higher order components?
 
     Both render props and higher-order components render only a single child but in most of the cases Hooks are a simpler way to serve this by reducing nesting in your tree.
 
     **[⬆ Back to Top](#table-of-contents)**
 
-53. ### What is a switching component?
+54. ### What is a switching component?
 
     A _switching component_ is a component that renders one of many components. We need to use object to map prop values to components.
 
@@ -1288,7 +1294,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-54. ### What are React Mixins?
+55. ### What are React Mixins?
 
     _Mixins_ are a way to totally separate components to have a common functionality. Mixins **should not be used** and can be replaced with _higher-order components_ or _decorators_.
 
@@ -1307,7 +1313,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-55. ### What are the Pointer Events supported in React?
+56. ### What are the Pointer Events supported in React?
 
     _Pointer Events_ provide a unified way of handling all input events. In the old days we had a mouse and respective event listeners to handle them but nowadays we have many devices which don't correlate to having a mouse, like phones with touch surface or pens. We need to remember that these events will only work in browsers that support the _Pointer Events_ specification.
 
@@ -1326,7 +1332,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-56. ### Why should component names start with capital letter?
+57. ### Why should component names start with capital letter?
 
     If you are rendering your component using JSX, the name of that component has to begin with a capital letter otherwise React will throw an error as an unrecognized tag. This convention is because only HTML elements and SVG tags can begin with a lowercase letter.
 
@@ -1356,7 +1362,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-57. ### Are custom DOM attributes supported in React v16?
+58. ### Are custom DOM attributes supported in React v16?
 
     Yes. In the past, React used to ignore unknown DOM attributes. If you wrote JSX with an attribute that React doesn't recognize, React would just skip it.
 
@@ -1382,7 +1388,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-58. ### How to loop inside JSX?
+59. ### How to loop inside JSX?
 
     You can simply use `Array.prototype.map` with ES6 _arrow function_ syntax.
 
@@ -1410,7 +1416,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-59. ### How do you access props in attribute quotes?
+60. ### How do you access props in attribute quotes?
 
     React (or JSX) doesn't support variable interpolation inside an attribute value. The below representation won't work:
 
@@ -1432,7 +1438,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-60. ### What is React proptype array with shape?
+61. ### What is React proptype array with shape?
 
     If you want to pass an array of objects to a component with a particular shape then use `React.PropTypes.shape()` as an argument to `React.PropTypes.arrayOf()`.
 
@@ -1449,7 +1455,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-61. ### How to conditionally apply class attributes?
+62. ### How to conditionally apply class attributes?
 
     You shouldn't use curly braces inside quotes because it is going to be evaluated as a string.
 
@@ -1471,13 +1477,13 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-62. ### What is the difference between React and ReactDOM?
+63. ### What is the difference between React and ReactDOM?
 
     The `react` package contains `React.createElement()`, `React.Component`, `React.Children`, and other helpers related to elements and component classes. You can think of these as the isomorphic or universal helpers that you need to build components. The `react-dom` package contains `ReactDOM.render()`, and in `react-dom/server` we have _server-side rendering_ support with `ReactDOMServer.renderToString()` and `ReactDOMServer.renderToStaticMarkup()`.
 
     **[⬆ Back to Top](#table-of-contents)**
 
-63. ### Why ReactDOM is separated from React?
+64. ### Why ReactDOM is separated from React?
 
     The React team worked on extracting all DOM-related features into a separate library called _ReactDOM_. React v0.14 is the first release in which the libraries are split. By looking at some of the packages, `react-native`, `react-art`, `react-canvas`, and `react-three`, it has become clear that the beauty and essence of React has nothing to do with browsers or the DOM.
 
@@ -1485,7 +1491,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-64. ### How to use React label element?
+65. ### How to use React label element?
 
     If you try to render a `<label>` element bound to a text input using the standard `for` attribute, then it produces HTML missing that attribute and prints a warning to the console.
 
@@ -1503,7 +1509,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-65. ### How to combine multiple inline style objects?
+66. ### How to combine multiple inline style objects?
 
     You can use _spread operator_ in regular React:
 
@@ -1523,7 +1529,7 @@ class ParentComponent extends React.Component {
 
     **[⬆ Back to Top](#table-of-contents)**
 
-66. ### How to re-render the view when the browser is resized?
+67. ### How to re-render the view when the browser is resized?
 
           You can use the `useState` hook to manage the width and height state variables, and the `useEffect` hook to add and remove the `resize` event listener. The `[]` dependency array passed to useEffect ensures that the effect only runs once (on mount) and not on every re-render.
 
